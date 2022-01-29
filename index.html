@@ -13,10 +13,27 @@
             <a href="#" class="logo">CleanOk</a>
             <nav class="header-nav">
                 <ul class="header-nav__list">
-                    <li><a href="#" class="header-nav__link">Услуги</a></li>
-                    <li><a href="#" class="header-nav__link">Клиенты</a></li>
-                    <li><a href="#" class="header-nav__link">Сертификаты</a></li>
-                    <li><a href="#" class="header-nav__link">Контакты</a></li>
+                    <li><a data-header="services" href="#" class="header-nav__link">Услуги</a></li>
+                    <li><a data-header="clients" href="#" class="header-nav__link">Клиенты</a></li>
+                    <li><a data-header="competence" href="#" class="header-nav__link">Сертификаты</a></li>
+                    <li><a data-header="map" href="#" class="header-nav__link">Контакты</a></li>
+                </ul>
+                <button class="header-nav-burger">
+                    <img src="./img/icons/burger-menu-icon.svg" alt="burger">
+                </button>
+            </nav>
+        </div>
+    </header>
+    <header class="header header_fixed">
+        <div class="header__inner">
+            <a href="#" class="logo">CleanOk</a>
+            <nav class="header-nav">
+                <button class="button button_middle">Заказать звонок</button>
+                <ul class="header-nav__list">
+                    <li><a data-header="services" href="#" class="header-nav__link">Услуги</a></li>
+                    <li><a data-header="clients" href="#" class="header-nav__link">Клиенты</a></li>
+                    <li><a data-header="competence" href="#" class="header-nav__link">Сертификаты</a></li>
+                    <li><a data-header="map" href="#" class="header-nav__link">Контакты</a></li>
                 </ul>
                 <button class="header-nav-burger">
                     <img src="./img/icons/burger-menu-icon.svg" alt="burger">
@@ -389,7 +406,7 @@
             <div class="competence__inner">
                 <div class="swiper-wrapper competence__wrapper">
                     <div class="competence-item swiper-slide">
-                        <a href="#">
+                        <a target="_blank" href="./img/certificates/1.pdf">
                             <img src="img/competence/icons/pdf.svg" alt="pdf">
                         </a>
                         <h2 class="subtitle subtitle_mb">
@@ -401,10 +418,25 @@
                         <span class="competence-item__text">
                             Обучение по курсу<br>
                             “Специалист”
-                    </span>
+                        </span>
                     </div>
                     <div class="competence-item swiper-slide">
-                        <a href="#">
+                        <a target="_blank" href="./img/certificates/2.pdf">
+                            <img src="img/competence/icons/pdf.svg" alt="pdf">
+                        </a>
+                        <h2 class="subtitle subtitle_mb">
+                            сертификат
+                        </h2>
+                        <h3 class="competence-item__title">
+                            Veleda Professional
+                        </h3>
+                        <span class="competence-item__text">
+                            Обучение по курсу<br>
+                            “Специалист”
+                        </span>
+                    </div>
+                    <div class="competence-item swiper-slide">
+                        <a target="_blank" href="./img/certificates/3.pdf">
                             <img src="img/competence/icons/pdf.svg" alt="pdf">
                         </a>
                         <h2 class="subtitle subtitle_mb">
@@ -418,7 +450,7 @@
                         </span>
                     </div>
                     <div class="competence-item swiper-slide">
-                        <a href="#">
+                        <a target="_blank" href="./img/certificates/4.pdf">
                             <img src="img/competence/icons/pdf.svg" alt="pdf">
                         </a>
                         <h2 class="subtitle subtitle_mb">
@@ -432,14 +464,14 @@
                         </span>
                     </div>
                     <div class="competence-item swiper-slide">
-                        <a href="#">
+                        <a target="_blank" href="./img/certificates/5.pdf">
                             <img src="img/competence/icons/pdf.svg" alt="pdf">
                         </a>
                         <h2 class="subtitle subtitle_mb">
                             сертификат
                         </h2>
                         <h3 class="competence-item__title">
-                            Veleda Professional
+                            CleanOk
                         </h3>
                         <span class="competence-item__text">
                             Официальный дистрибьютор торговой марки
@@ -454,6 +486,70 @@
         </div>
     </section>
     <section class="map" id="map">
+        <form class="map-search">
+            <div>
+                <input placeholder="Введите свой город для поиска" class="map-search__input" aria-label="" type="text">
+                <button class="map-search__button">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7929 1.70711C10.4024 1.31658 10.4024 0.683418 10.7929 0.292893C11.1834 -0.0976311 11.8166 -0.0976311 12.2071 0.292893L19.2071 7.29289C19.5976 7.68342 19.5976 8.31658 19.2071 8.70711L12.2071 15.7071C11.8166 16.0976 11.1834 16.0976 10.7929 15.7071C10.4024 15.3166 10.4024 14.6834 10.7929 14.2929L16.0858 9H1C0.447715 9 0 8.55229 0 8C0 7.44772 0.447715 7 1 7H16.0858L10.7929 1.70711Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="map-search__wrapper">
+                <div class="map-search__items">
+                    <div class="map-search-select">
+                    <span class="map-search-select__city">
+                        Хабаровск
+                    </span>
+                        <span class="map-search-select__address">
+                        ул. Серышева, 56<br>
+                        +7 (4212) 616 649, +7 (4212) 770 333
+                    </span>
+                    </div>
+                    <div class="map-search-select">
+                    <span class="map-search-select__city">
+                        Петропавловск-Камчатский
+                    </span>
+                        <span class="map-search-select__address">
+                        ул.Максутова, д. 42, оф. 44<br>
+                        8 (4152) 42 63 14, 8 914 020 38 08
+                    </span>
+                    </div>
+                    <div class="map-search-select">
+                    <span class="map-search-select__city">
+                        Якутск
+                    </span>
+                        <span class="map-search-select__address">
+                        ул. Орджонекидзе, д. 20, оф. 315<br>
+                        8 914 288 88 84
+                    </span>
+                    </div>
+                    <div class="map-search-select">
+                    <span class="map-search-select__city">
+                        Комсомольск-на-Амуре
+                    </span>
+                        <span class="map-search-select__address">
+                        ул. Красногвардейская, д. 14, оф. 204.<br>
+                        8 (4217) 54-68-45
+                    </span>
+                    </div>
+                    <div class="map-search-select">
+                    <span class="map-search-select__city">
+                        Комсомольск-на-Амуре
+                    </span>
+                        <span class="map-search-select__address">
+                        ул. Красногвардейская, д. 14, оф. 204.<br>
+                        8 (4217) 54-68-45
+                    </span>
+                    </div>
+                </div>
+                <div class="map-search__contacts">
+                    Единая справочная служба <a class="link link_middle" href="tel:+78003339909">8 800 333 99 09</a>
+                    (по России звонок бесплатный)
+                    <a href="mailto:info@cleanok.ru" class="link link_middle">info@cleanok.ru</a>
+                </div>
+            </div>
+        </form>
         <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3a93a423d9b7a806e4ea9768fde76683d88a9a7f4b1d31c87f23717095ca887&amp;width=100%25&amp;height=530&amp;lang=ru_RU&amp;scroll=false"></script>
     </section>
     <section class="feedback">

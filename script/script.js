@@ -3,10 +3,15 @@
 const servicesSliderList = document.querySelector('.services-slider__list')
 const servicesSliderItem = document.querySelectorAll('.services-slider-info')
 const servicesSliderNavs = document.querySelectorAll('.services-slider__item')
+const headerFixed = document.querySelector('.header_fixed')
+const buttonsFeedback = document.querySelectorAll('.button')
+const topBg = document.querySelector('.top-bg')
+const sections = document.querySelectorAll('section')
+const mapSearchInput = document.querySelector('.map-search__input')
+const mapSearchLinks = document.querySelector('.map-search__items')
 
 
 const swiper = new Swiper('.competence__inner', {
-
     loop: true,
     slidesPerView: 4,
     spaceBetween: 40,
@@ -17,8 +22,7 @@ const swiper = new Swiper('.competence__inner', {
 });
 
 const feedbackForm = () => {
-    const inputPhone = [...
-        document.querySelectorAll('.feedback-form__phone')]
+    const inputPhone = [...document.querySelectorAll('.feedback-form__phone')]
 
 
     inputPhone.forEach((item) => {
@@ -54,6 +58,42 @@ const feedbackForm = () => {
         item.addEventListener("keydown", mask, false)
     })
 }
+
+mapSearchInput.addEventListener('focus', () => {
+    document.querySelector('.map-search__wrapper').style.display = 'block'
+})
+
+mapSearchLinks.addEventListener('click', () => {
+    document.querySelector('.map-search__wrapper').style.display = 'none'
+})
+
+topBg.addEventListener('click', (e) => {
+    if (e.target.closest('.header-nav__link')) {
+        e.preventDefault()
+        sections.forEach((item) => {
+            if (e.target.closest('.header-nav__link')
+                .getAttribute('data-header') === item.classList.value) {
+                document.querySelector(`.${item.classList.value}`)
+                    .scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        })
+    }
+})
+
+buttonsFeedback.forEach((item) => {
+    item.addEventListener('click', () => {
+        document.querySelector('.feedback')
+            .scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+})
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > 45) {
+        headerFixed.style.display = 'block'
+    } else {
+        headerFixed.style.display = 'none'
+    }
+})
 
 servicesSliderList.addEventListener('click', (e) => {
     if (e.target.closest('.services-slider__item')) {
