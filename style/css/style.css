@@ -1153,6 +1153,11 @@ ul {
   color: #6783FE;
 }
 
+@media (max-width: 1022px) {
+  .footer {
+    padding: 45px 0;
+  }
+}
 @media (max-width: 798px) {
   .footer__inner {
     flex-direction: column;
