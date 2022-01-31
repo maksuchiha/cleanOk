@@ -53,6 +53,12 @@ body {
   color: rgba(4, 17, 51, 0.7);
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   position: relative;
   max-width: 1230px;
@@ -68,6 +74,10 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
+}
+.top-bg_none {
+  min-height: auto;
+  background: none;
 }
 
 a {
@@ -1107,6 +1117,7 @@ ul {
   }
 }
 .footer {
+  margin-top: auto;
   padding: 70px 0;
   background: rgba(224, 227, 240, 0.5);
 }

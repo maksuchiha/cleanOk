@@ -94,14 +94,17 @@ topBg.addEventListener('click', (e) => {
         })
     }
     if (e.target.closest('.nav-menu__link')) {
-        e.preventDefault()
-        sections.forEach((item) => {
-            if (e.target.closest('.nav-menu__link')
-                .getAttribute('data-header') === item.classList.value) {
-                document.querySelector(`.${item.classList.value}`)
-                    .scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-        })
+        if (e.target.closest('.nav-menu__link')
+            .getAttribute('data-header')) {
+            e.preventDefault()
+            sections.forEach((item) => {
+                if (e.target.closest('.nav-menu__link')
+                    .getAttribute('data-header') === item.classList.value) {
+                    document.querySelector(`.${item.classList.value}`)
+                        .scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+            })
+        }
     }
     if (e.target.closest('.header-nav-burger')) {
         navMenu.classList.add('nav-menu_active')
