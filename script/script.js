@@ -123,10 +123,8 @@ buttonsFeedback.forEach((item) => {
 document.addEventListener('scroll', () => {
     if (window.scrollY > 45) {
         headerFixed.style.display = 'block'
-        navMenu.classList.add('nav-menu_height')
     } else {
         headerFixed.style.display = 'none'
-        navMenu.classList.remove('nav-menu_height')
     }
 })
 
