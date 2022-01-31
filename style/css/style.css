@@ -65,7 +65,6 @@ body {
 .top-bg {
   min-height: 900px;
   background: url("./../../img/header/bg.jpeg") right top no-repeat;
-  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -113,6 +112,10 @@ ul {
   .container {
     max-width: 405px;
   }
+
+  .overflow {
+    overflow: hidden;
+  }
 }
 .logo {
   font-family: Dosis, sans-serif;
@@ -126,13 +129,13 @@ ul {
 
 .header {
   padding: 18px 30px;
+  position: relative;
 }
 .header_fixed {
   padding: 15px 30px;
   background: #fff;
   display: none;
   width: 100%;
-  max-width: 1440px;
   position: fixed;
   top: 0;
   z-index: 5;

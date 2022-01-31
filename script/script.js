@@ -105,11 +105,11 @@ topBg.addEventListener('click', (e) => {
     }
     if (e.target.closest('.header-nav-burger')) {
         navMenu.classList.add('nav-menu_active')
-        document.querySelector('.body').style.overflow = 'hidden'
+        document.querySelector('.body').classList.add('overflow')
     }
     if (e.target.closest('.nav-menu__close') || e.target.closest('.nav-menu__link')) {
         navMenu.classList.remove('nav-menu_active')
-        document.querySelector('.body').style.overflow = 'auto'
+        document.querySelector('.body').classList.remove('overflow')
     }
 })
 
