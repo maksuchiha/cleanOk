@@ -9,6 +9,7 @@ const topBg = document.querySelector('.top-bg')
 const sections = document.querySelectorAll('section')
 const mapSearchInput = document.querySelector('.map-search__input')
 const mapSearchLinks = document.querySelector('.map-search__items')
+const navMenu = document.querySelector('.nav-menu')
 
 
 const swiper = new Swiper('.competence__inner', {
@@ -19,6 +20,20 @@ const swiper = new Swiper('.competence__inner', {
         nextEl: '.competence-arrow_right',
         prevEl: '.competence-arrow_left',
     },
+    breakpoints: {
+        1022: {
+            slidesPerView: 4,
+        },
+        798: {
+            slidesPerView: 3,
+        },
+        606: {
+            slidesPerView: 2,
+        },
+        320: {
+            slidesPerView: 1,
+        },
+    }
 });
 
 const feedbackForm = () => {
@@ -78,6 +93,24 @@ topBg.addEventListener('click', (e) => {
             }
         })
     }
+    if (e.target.closest('.nav-menu__link')) {
+        e.preventDefault()
+        sections.forEach((item) => {
+            if (e.target.closest('.nav-menu__link')
+                .getAttribute('data-header') === item.classList.value) {
+                document.querySelector(`.${item.classList.value}`)
+                    .scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        })
+    }
+    if (e.target.closest('.header-nav-burger')) {
+        navMenu.classList.add('nav-menu_active')
+        document.querySelector('.body').style.overflow = 'hidden'
+    }
+    if (e.target.closest('.nav-menu__close') || e.target.closest('.nav-menu__link')) {
+        navMenu.classList.remove('nav-menu_active')
+        document.querySelector('.body').style.overflow = 'auto'
+    }
 })
 
 buttonsFeedback.forEach((item) => {
@@ -90,8 +123,10 @@ buttonsFeedback.forEach((item) => {
 document.addEventListener('scroll', () => {
     if (window.scrollY > 45) {
         headerFixed.style.display = 'block'
+        navMenu.classList.add('nav-menu_height')
     } else {
         headerFixed.style.display = 'none'
+        navMenu.classList.remove('nav-menu_height')
     }
 })
 

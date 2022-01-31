@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/css/style.css">
 </head>
-<body>
+<body class="body">
 <div class="top-bg">
     <header class="header">
         <div class="header__inner">
@@ -22,6 +22,29 @@
                     <img src="./img/icons/burger-menu-icon.svg" alt="burger">
                 </button>
             </nav>
+        </div>
+        <div class="nav-menu">
+            <button class="nav-menu__close">
+                <img src="./img/header/icons/close.svg" alt="close">
+            </button>
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item nav-menu__item_mob"><a data-header="services" href="#" class="nav-menu__link">Услуги</a></li>
+                <li class="nav-menu__item nav-menu__item_mob"><a data-header="clients" href="#" class="nav-menu__link">Клиенты</a></li>
+                <li class="nav-menu__item nav-menu__item_mob"><a data-header="competence" href="#" class="nav-menu__link">Сертификаты</a></li>
+                <li class="nav-menu__item nav-menu__item_mob"><a data-header="map" href="#" class="nav-menu__link">Контакты</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Сотрудники</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">О компании</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Реквизиты</a></li>
+                <li class="nav-menu__item"><a href="#" class="nav-menu__link">Еще одна страница</a></li>
+            </ul>
+            <div class="footer-contacts footer-contacts_center">
+                <span class="footer-contacts__info">
+                    Единая справочная служба
+                </span>
+                <a href="tel:+78003339909" class="footer-contacts__phone">
+                    8 800 333 99 09
+                </a>
+            </div>
         </div>
     </header>
     <header class="header header_fixed">
@@ -98,6 +121,9 @@
                         <div class="clients__item">
                             <img src="./img/clients/icons/siemens.svg" alt="siemens">
                         </div>
+                        <div class="clients__item clients__item_1">
+                            <img src="./img/clients/icons/east.svg" alt="east">
+                        </div>
                     </div>
                     <div class="clients__middle">
                         <div class="clients__item">
@@ -118,11 +144,14 @@
                         <div class="clients__item">
                             <img src="./img/clients/icons/dv-bank.svg" alt="dv-bank">
                         </div>
-                        <div class="clients__item">
+                        <div class="clients__item clients__item_1">
                             <img src="./img/clients/icons/east.svg" alt="east">
                         </div>
-                        <div class="clients__item">
+                        <div class="clients__item clients__item_1 clients__item_3">
                             <img src="./img/clients/icons/deer.svg" alt="deer">
+                        </div>
+                        <div class="clients__item clients__item_2">
+                            <img src="./img/clients/icons/east.svg" alt="east">
                         </div>
                     </div>
                     <div class="clients__bottom">
@@ -140,6 +169,9 @@
                         </div>
                         <div class="clients__item">
                             <img src="./img/clients/icons/baltica.svg" alt="baltica">
+                        </div>
+                        <div class="clients__item clients__item_1">
+                            <img src="./img/clients/icons/deer.svg" alt="deer">
                         </div>
                     </div>
                 </div>
@@ -608,6 +640,7 @@
         </div>
     </div>
 </footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=scrollIntoView"></script>
 <script src="./script/libs/swiper-bundle.min.js"></script>
 <script src="./script/script.js"></script>
 </body>
