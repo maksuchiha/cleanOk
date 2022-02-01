@@ -739,7 +739,7 @@ ul {
     padding: 45px 0;
   }
   .services-slider {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .services-slider__nav {
     max-width: 100%;
@@ -748,7 +748,7 @@ ul {
   .services-slider__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-bottom: 25px;
   }
   .services-slider__item {
     flex: 0 0 50%;
